@@ -17,7 +17,7 @@ class Unify:
 
     def add_handler(self, handler):
         if handler.id is None:
-            raise ValueError('Handler not properly configured')
+            raise ValueError("Handler not properly configured")
         self._handlers[handler.id] = handler
 
 
@@ -27,16 +27,14 @@ class Handler:
     @staticmethod
     def redirect(url, **query):
         url_parts = list(urllib.parse.urlparse(url))
-        url_parts[4] = urllib.parse.urlencode({
-            key: value
-            for key, value in query.items()
-            if value is not null
-        })
+        url_parts[4] = urllib.parse.urlencode(
+            {key: value for key, value in query.items() if value is not null}
+        )
         url = urllib.parse.urlunparse(url_parts)
         response = redirect(url)
-        for attr in ('headers',):
+        for attr in ("headers",):
             setattr(response, attr, getattr(request, attr))
         return response
 
     def auth(self, **_):
-        raise NotImplemented('Function auth needs to be implemented in child object')
+        raise NotImplemented("Function auth needs to be implemented in child object")

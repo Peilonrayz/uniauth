@@ -1,4 +1,4 @@
-Welcome to uniauth's documentation!
+Welcome to UniAuth's documentation!
 =======================================
 
 .. toctree::

@@ -1,4 +1,4 @@
-uniauth
+UniAuth
 =======
 
 .. image:: https://travis-ci.com/Peilonrayz/uniauth.svg?branch=master
@@ -8,7 +8,7 @@ uniauth
 About
 -----
 
-This is a skeleton project to have a standardized and concrete base for all projects.
+Authentication unifier.
 
 Installation
 ------------
@@ -37,4 +37,4 @@ To run all tests run ``nox``. No venv is needed; nox makes all of them for us.
 License
 -------
 
-uniauth is available under the MIT license.
+UniAuth is available under the MIT license.
